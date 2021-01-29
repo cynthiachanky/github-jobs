@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {Button, Card, CardImg, CardImgOverlay, Input, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
+import Icon from './Icon';
 
 const SearchCard = ({callback}) => {
   const [inputValue, setInputValue] = useState('');
@@ -16,7 +17,7 @@ const SearchCard = ({callback}) => {
         <InputGroup>
           <InputGroupAddon addonType={'prepend'}>
             <InputGroupText>
-              <i className={'material-icons'}>work_outline</i>
+              <Icon type={'work_outline'}/>
             </InputGroupText>
           </InputGroupAddon>
 

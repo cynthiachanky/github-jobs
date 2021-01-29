@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {CustomInput, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText, Label} from 'reactstrap';
+import {LocationIcon} from './Icon';
 
 const locations = ['London', 'Amsterdam', 'New York', 'Berlin'];
 
@@ -24,7 +25,7 @@ const FilterForm = ({callback}) => {
         <InputGroup>
           <InputGroupAddon addonType={'prepend'}>
             <InputGroupText>
-              <i className={'material-icons'}>public</i>
+              <LocationIcon/>
             </InputGroupText>
           </InputGroupAddon>
 

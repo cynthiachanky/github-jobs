@@ -1,5 +1,6 @@
-import moment from 'moment';
 import {Badge, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
+import {DatetimeIcon, LocationIcon} from './Icon';
+import {momentConverter} from '../utilities/helper';
 
 const JobCard = ({id, company_logo, company, title, location, created_at, type}) => (
   <Card className={'job-card'}>
@@ -18,14 +19,14 @@ const JobCard = ({id, company_logo, company, title, location, created_at, type})
             </Col>
             <Col sm={6} md={5}>
               <CardText>
-                <i className={'material-icons'}>public</i>
+                <LocationIcon/>
                 {location}
               </CardText>
             </Col>
             <Col sm={6} md={4}>
               <CardText>
-                <i className={'material-icons'}>schedule</i>
-                {moment(created_at, 'dddd MMMM DD HH:mm:ss [UTC] YYYY').fromNow()}
+                <DatetimeIcon/>
+                {momentConverter(created_at)}
               </CardText>
             </Col>
           </Row>
