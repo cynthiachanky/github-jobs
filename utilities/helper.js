@@ -1,7 +1,5 @@
 import moment from 'moment';
-
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com';
-const GITHUB_JOB_API = 'https://jobs.github.com';
+import {CORS_PROXY, GITHUB_JOB_API} from './constant';
 
 const getRequest = async (url, query = {}) => {
   query = Object.entries(query).map(([key, value]) => `${key}=${value}`).join('&');

@@ -1,8 +1,7 @@
 import {useState} from 'react';
 import {CustomInput, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText, Label} from 'reactstrap';
 import {LocationIcon} from '../common/Icon';
-
-const locations = ['London', 'Amsterdam', 'New York', 'Berlin'];
+import {LOCATIONS} from '../../utilities/constant';
 
 const FilterForm = ({callback}) => {
   const [form, setForm] = useState({isFullTime: false, location: ''});
@@ -35,7 +34,7 @@ const FilterForm = ({callback}) => {
       </FormGroup>
 
       <FormGroup>
-        {locations.map((location, index) => {
+        {LOCATIONS.map((location, index) => {
           const name = 'location-option';
           const key = `${name}-${index}`;
           return <CustomInput key={key} id={key} name={name} type={'radio'} label={location}
