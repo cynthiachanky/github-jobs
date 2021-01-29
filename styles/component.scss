@@ -1,0 +1,31 @@
+.alert {
+  @extend .cell-center;
+  justify-content: flex-start;
+
+  i.material-icons {
+    @extend .mr-2;
+  }
+}
+
+.icon-text {
+  @extend .cell-center--xs;
+  margin-bottom: 0;
+  color: $secondary;
+
+  i.material-icons {
+    @extend .mx-1;
+  }
+}
+
+.badge.badge--full-time {
+  @extend .h6, .ml-2;
+  margin-bottom: 0;
+}
+
+.logo {
+  @extend .cell-center;
+
+  img {
+    max-width: 100px;
+  }
+}

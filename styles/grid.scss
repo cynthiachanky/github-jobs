@@ -1,0 +1,34 @@
+$breakpoints-xs: 0;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+
+.cell-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell-center--xs {
+  @extend .cell-center;
+
+  @media (min-width: $breakpoints-xs) {
+    justify-content: flex-start;
+  }
+}
+
+.cell-center--sm {
+  @extend .cell-center;
+
+  @media (min-width: $breakpoints-sm) {
+    justify-content: flex-start;
+  }
+}
+
+.cell--sm {
+  @media (min-width: $breakpoints-sm) {
+    display: flex;
+    align-items: center;
+  }
+}

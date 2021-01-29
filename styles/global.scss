@@ -1,40 +1,5 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
-$breakpoints-xs: 0;
-$breakpoints-sm: 576px;
-$breakpoints-md: 768px;
-$breakpoints-lg: 992px;
-$breakpoints-xl: 1200px;
-
-.cell-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cell-center--xs {
-  @extend .cell-center;
-
-  @media (min-width: $breakpoints-xs) {
-    justify-content: flex-start;
-  }
-}
-
-.cell-center--sm {
-  @extend .cell-center;
-
-  @media (min-width: $breakpoints-sm) {
-    justify-content: flex-start;
-  }
-}
-
-.cell--sm {
-  @media (min-width: $breakpoints-sm) {
-    display: flex;
-    align-items: center;
-  }
-}
-
 body {
   @extend .container;
 
@@ -63,37 +28,5 @@ body {
   .loader {
     @extend .cell-center;
     min-height: 50vh;
-  }
-}
-
-.alert {
-  @extend .cell-center;
-  justify-content: flex-start;
-
-  i.material-icons {
-    @extend .mr-2;
-  }
-}
-
-.icon-text {
-  @extend .cell-center--xs;
-  margin-bottom: 0;
-  color: $secondary;
-
-  i.material-icons {
-    @extend .mx-1;
-  }
-}
-
-.badge.badge--full-time {
-  @extend .h6, .ml-2;
-  margin-bottom: 0;
-}
-
-.logo {
-  @extend .cell-center;
-
-  img {
-    max-width: 100px;
   }
 }

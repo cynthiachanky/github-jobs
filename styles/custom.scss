@@ -1,7 +1,13 @@
 @import "fresca-theme";
 
 @import "global";
+@import "grid";
+@import "component";
+
+// index page
 @import "search-card";
 @import "filter-form";
 @import "job-card";
+
+// detail page
 @import "job-detail";
