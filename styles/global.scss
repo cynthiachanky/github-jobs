@@ -18,6 +18,10 @@ body {
     @extend .h1, .my-3, .pb-3;
   }
 
+  main {
+    min-height: calc(100vh - 100px - 16px * 4);
+  }
+
   footer {
     @extend .h6, .my-3, .pt-3;
     font-weight: $font-weight-bolder;

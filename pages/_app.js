@@ -11,7 +11,9 @@ const GithubJobs = ({Component, pageProps}) => (
       <link rel="icon" href="/devchallenges.png"/>
     </Head>
     <Header/>
-    <Component {...pageProps}/>
+    <main>
+      <Component {...pageProps}/>
+    </main>
     <Footer/>
   </>
 );
