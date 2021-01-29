@@ -6,6 +6,20 @@ $breakpoints-md: 768px;
 $breakpoints-lg: 992px;
 $breakpoints-xl: 1200px;
 
+.cell-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell-sm {
+  @extend .cell-center;
+
+  @media (min-width: $breakpoints-sm) {
+    justify-content: flex-start;
+  }
+}
+
 body {
   @extend .container;
 
@@ -30,14 +44,18 @@ body {
     text-align: center;
     color: $secondary;
   }
+
+  .loader {
+    @extend .cell-center;
+    min-height: 50vh;
+  }
 }
 
-.cell-sm {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.alert {
+  @extend .cell-center;
+  justify-content: flex-start;
 
-  @media (min-width: $breakpoints-sm) {
-    justify-content: flex-start;
+  i.material-icons {
+    @extend .mr-2;
   }
 }
