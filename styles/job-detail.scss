@@ -25,9 +25,16 @@
 
   a {
     color: $warning;
+    overflow-wrap: break-word;
 
     &:hover {
       color: $danger;
+    }
+  }
+
+  .icon-text {
+    &.btn {
+      @extend .mb-4;
     }
   }
 }

@@ -1,12 +1,20 @@
+import Link from 'next/link';
 import parser from 'html-react-parser';
-import {Col, Row} from 'reactstrap';
-import {FullTimeBadge} from '../components/common';
+import {Button, Col, Row} from 'reactstrap';
+import {FullTimeBadge, Icon} from '../components/common';
 import {DatetimeIcon, LocationIcon} from '../components/common/Icon';
 import {fetcher, momentConverter} from '../utilities/helper';
 
 const DetailPage = ({title, type, created_at, company_logo, company, location, description, how_to_apply}) => (
   <Row className={'job-detail'}>
     <Col lg={3}>
+      <Link href={'/'}>
+        <Button className={'icon-text'} outline>
+          <Icon type={'arrow_back'}/>
+          Back to search
+        </Button>
+      </Link>
+
       <h6 className={'subtitle'}>How To Apply</h6>
       {parser(how_to_apply)}
     </Col>

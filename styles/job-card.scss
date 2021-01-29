@@ -2,6 +2,7 @@
   @extend .my-3;
   text-align: center;
   color: $dark;
+  cursor: pointer;
 
   @media (min-width: $breakpoints-sm) {
     text-align: left;
