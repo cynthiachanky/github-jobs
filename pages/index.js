@@ -8,12 +8,16 @@ const IndexPage = () => {
     console.log('[handleSearch]', keyword);
   };
 
+  const handleFilter = form => {
+    console.log('[handleFilter]', form);
+  };
+
   return (
     <>
       <SearchCard callback={handleSearch}/>
-      <Row>
+      <Row className={'my-4'}>
         <Col md={5}>
-          <FilterForm/>
+          <FilterForm callback={handleFilter}/>
         </Col>
         <Col md={7}>
           <JobCard/>

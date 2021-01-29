@@ -20,7 +20,7 @@ body {
 
   footer {
     @extend .h6, .my-3, .pt-3;
-    font-weight: bolder;
+    font-weight: $font-weight-bolder;
     text-align: center;
     color: $secondary;
   }
