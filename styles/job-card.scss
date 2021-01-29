@@ -1,0 +1,36 @@
+.job-card {
+  color: $dark;
+
+  .card {
+    &-img {
+      max-width: 100px;
+    }
+
+    &-subtitle {
+      @extend .h6;
+      font-weight: $font-weight-bolder;
+    }
+
+    &-title {
+      @extend .h4;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      color: $secondary;
+
+      @media (min-width: 768px) {
+        justify-content: flex-end;
+      }
+
+      i.material-icons {
+        @extend .mx-1;
+      }
+    }
+  }
+
+  .badge {
+    @extend .h6;
+  }
+}
