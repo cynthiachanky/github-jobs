@@ -12,11 +12,26 @@ $breakpoints-xl: 1200px;
   justify-content: center;
 }
 
-.cell-sm {
+.cell-center--xs {
+  @extend .cell-center;
+
+  @media (min-width: $breakpoints-xs) {
+    justify-content: flex-start;
+  }
+}
+
+.cell-center--sm {
   @extend .cell-center;
 
   @media (min-width: $breakpoints-sm) {
     justify-content: flex-start;
+  }
+}
+
+.cell--sm {
+  @media (min-width: $breakpoints-sm) {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -57,5 +72,28 @@ body {
 
   i.material-icons {
     @extend .mr-2;
+  }
+}
+
+.icon-text {
+  @extend .cell-center--xs;
+  margin-bottom: 0;
+  color: $secondary;
+
+  i.material-icons {
+    @extend .mx-1;
+  }
+}
+
+.badge.badge--full-time {
+  @extend .h6, .ml-2;
+  margin-bottom: 0;
+}
+
+.logo {
+  @extend .cell-center;
+
+  img {
+    max-width: 100px;
   }
 }

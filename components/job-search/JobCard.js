@@ -1,4 +1,5 @@
-import {Badge, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
+import {Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
+import {FullTimeBadge} from '../common';
 import {DatetimeIcon, LocationIcon} from '../common/Icon';
 import {momentConverter} from '../../utilities/helper';
 
@@ -15,16 +16,16 @@ const JobCard = ({id, company_logo, company, title, location, created_at, type})
           <CardTitle>{title}</CardTitle>
           <Row className={'description'}>
             <Col sm={12} md={3} className={'type'}>
-              {type === 'Full Time' && <Badge color={'dark'}>Full Time</Badge>}
+              <FullTimeBadge type={type}/>
             </Col>
             <Col sm={6} md={5}>
-              <CardText>
+              <CardText className={'icon-text'}>
                 <LocationIcon/>
                 {location}
               </CardText>
             </Col>
             <Col sm={6} md={4}>
-              <CardText>
+              <CardText className={'icon-text'}>
                 <DatetimeIcon/>
                 {momentConverter(created_at)}
               </CardText>
