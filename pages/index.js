@@ -1,11 +1,8 @@
 import {useState} from 'react';
 import useSWR from 'swr';
 import {Col, Row} from 'reactstrap';
-import Loader from '../components/Loader';
-import Warning from '../components/Warning';
-import SearchCard from '../components/SearchCard';
-import FilterForm from '../components/FilterForm';
-import JobCard from '../components/JobCard';
+import {Loader, Warning} from '../components/common';
+import {FilterForm, JobCard, SearchCard} from '../components/job-search';
 import {corsFetcher} from '../utilities/helper';
 
 const IndexPage = () => {

@@ -1,6 +1,6 @@
 import {Badge, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
-import {DatetimeIcon, LocationIcon} from './Icon';
-import {momentConverter} from '../utilities/helper';
+import {DatetimeIcon, LocationIcon} from '../common/Icon';
+import {momentConverter} from '../../utilities/helper';
 
 const JobCard = ({id, company_logo, company, title, location, created_at, type}) => (
   <Card className={'job-card'}>

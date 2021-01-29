@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Button, Card, CardImg, CardImgOverlay, Input, InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
-import Icon from './Icon';
+import {Icon} from '../common';
 
 const SearchCard = ({callback}) => {
   const [inputValue, setInputValue] = useState('');

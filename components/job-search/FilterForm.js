@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {CustomInput, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText, Label} from 'reactstrap';
-import {LocationIcon} from './Icon';
+import {LocationIcon} from '../common/Icon';
 
 const locations = ['London', 'Amsterdam', 'New York', 'Berlin'];
 
