@@ -1,3 +1,4 @@
+import moment from 'moment';
 import {Badge, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Row} from 'reactstrap';
 
 const JobCard = ({id, company_logo, company, title, location, created_at, type}) => (
@@ -11,8 +12,8 @@ const JobCard = ({id, company_logo, company, title, location, created_at, type})
         <Col sm={9} xl={10}>
           <CardSubtitle>{company}</CardSubtitle>
           <CardTitle>{title}</CardTitle>
-          <Row>
-            <Col sm={12} md={4}>
+          <Row className={'description'}>
+            <Col sm={12} md={4} className={'type'}>
               {type === 'Full Time' && <Badge color={'dark'}>Full Time</Badge>}
             </Col>
             <Col sm={6} md={4}>
@@ -24,7 +25,7 @@ const JobCard = ({id, company_logo, company, title, location, created_at, type})
             <Col sm={6} md={4}>
               <CardText>
                 <i className={'material-icons'}>schedule</i>
-                {created_at}
+                {moment(created_at).fromNow()}
               </CardText>
             </Col>
           </Row>

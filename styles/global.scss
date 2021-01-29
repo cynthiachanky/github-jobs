@@ -25,3 +25,13 @@ body {
     color: $secondary;
   }
 }
+
+.cell-md {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 576px) {
+    justify-content: flex-start;
+  }
+}

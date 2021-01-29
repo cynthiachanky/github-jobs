@@ -1,5 +1,11 @@
 .job-card {
+  @extend .my-3;
+  text-align: center;
   color: $dark;
+
+  @media (min-width: 576px) {
+    text-align: left;
+  }
 
   .card {
     &-img {
@@ -8,29 +14,42 @@
 
     &-subtitle {
       @extend .h6;
+      margin-top: 1rem;
       font-weight: $font-weight-bolder;
+
+      @media (min-width: 576px) {
+        margin-top: 0;
+      }
     }
 
     &-title {
       @extend .h4;
     }
-
-    &-text {
-      display: flex;
-      align-items: center;
-      color: $secondary;
-
-      @media (min-width: 768px) {
-        justify-content: flex-end;
-      }
-
-      i.material-icons {
-        @extend .mx-1;
-      }
-    }
   }
 
-  .badge {
-    @extend .h6;
+  .description {
+    [class*='col'] {
+      @extend .cell-md, .mt-2;
+
+      &:not(.type) {
+        @media (min-width: 768px) {
+          justify-content: flex-end;
+        }
+      }
+
+      .card-text {
+        @extend .cell-md;
+        color: $secondary;
+
+        i.material-icons {
+          @extend .mx-1;
+        }
+      }
+
+      .badge {
+        @extend .h6;
+        margin-bottom: 0;
+      }
+    }
   }
 }

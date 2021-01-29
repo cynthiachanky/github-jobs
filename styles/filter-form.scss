@@ -1,5 +1,5 @@
 .filter-form {
-  @extend .p-3;
+  @extend .my-3, .p-3;
   background-color: $secondary;
   color: $dark;
   border-radius: 0.5rem;
