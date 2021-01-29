@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
+$breakpoints-xs: 0;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+
 body {
   @extend .container;
 
@@ -26,12 +32,12 @@ body {
   }
 }
 
-.cell-md {
+.cell-sm {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 576px) {
+  @media (min-width: $breakpoints-sm) {
     justify-content: flex-start;
   }
 }

@@ -5,7 +5,7 @@
   .card-img {
     min-height: 100px;
 
-    @media (min-width: 576px) {
+    @media (min-width: $breakpoints-sm) {
       min-height: 150px;
     }
 
@@ -13,12 +13,12 @@
       display: flex;
       align-items: center;
 
-      @media (min-width: 576px) {
+      @media (min-width: $breakpoints-sm) {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: $breakpoints-xl) {
         margin-left: 5rem;
         margin-right: 5rem;
       }

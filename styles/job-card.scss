@@ -3,7 +3,7 @@
   text-align: center;
   color: $dark;
 
-  @media (min-width: 576px) {
+  @media (min-width: $breakpoints-sm) {
     text-align: left;
   }
 
@@ -17,7 +17,7 @@
       margin-top: 1rem;
       font-weight: $font-weight-bolder;
 
-      @media (min-width: 576px) {
+      @media (min-width: $breakpoints-sm) {
         margin-top: 0;
       }
     }
@@ -29,16 +29,16 @@
 
   .description {
     [class*='col'] {
-      @extend .cell-md, .mt-2;
+      @extend .cell-sm, .mt-2;
 
       &:not(.type) {
-        @media (min-width: 768px) {
+        @media (min-width: $breakpoints-md) {
           justify-content: flex-end;
         }
       }
 
       .card-text {
-        @extend .cell-md;
+        @extend .cell-sm;
         color: $secondary;
 
         i.material-icons {
