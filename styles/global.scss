@@ -1,0 +1,25 @@
+body {
+  @extend .container;
+
+  @media (min-width: 1440px) {
+    max-width: 1368px;
+  }
+
+  @media (min-width: 1700px) {
+    max-width: 1615px;
+  }
+
+  background-color: $primary;
+  color: $light;
+
+  header {
+    @extend .h1, .my-3, .pb-3;
+  }
+
+  footer {
+    @extend .h6, .my-3, .pt-3;
+    font-weight: bolder;
+    text-align: center;
+    color: $secondary;
+  }
+}
