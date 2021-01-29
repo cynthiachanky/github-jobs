@@ -12,6 +12,15 @@
 
   .logo {
     @extend .cell-center--xs;
+
+    img {
+      @extend .my-3, .p-3;
+      background-color: $light;
+    }
+  }
+
+  .description {
+    @extend .cell-center--xs;
   }
 
   a {

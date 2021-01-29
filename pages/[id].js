@@ -21,16 +21,18 @@ const DetailPage = ({title, type, created_at, company_logo, company, location, d
         {momentConverter(created_at)}
       </p>
 
-      <Row>
+      <Row className={'my-3'}>
         <Col sm={3} xl={2} className={'logo'}>
           <img src={company_logo} alt={company}/>
         </Col>
-        <Col sm={9} xl={10}>
-          <h5 className={'title'}>{company}</h5>
-          <p className={'icon-text'}>
-            <LocationIcon/>
-            {location}
-          </p>
+        <Col sm={9} xl={10} className={'description'}>
+          <div>
+            <h5 className={'title'}>{company}</h5>
+            <p className={'icon-text'}>
+              <LocationIcon/>
+              {location}
+            </p>
+          </div>
         </Col>
       </Row>
 
