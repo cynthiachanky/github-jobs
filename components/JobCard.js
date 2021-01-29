@@ -5,7 +5,7 @@ const JobCard = ({id, company_logo, company, title, location, created_at, type})
   <Card className={'job-card'}>
     <CardBody>
       <Row>
-        <Col sm={3} xl={2}>
+        <Col sm={3} xl={2} className={'logo'}>
           <CardImg src={company_logo} alt={company}/>
         </Col>
 
@@ -13,10 +13,10 @@ const JobCard = ({id, company_logo, company, title, location, created_at, type})
           <CardSubtitle>{company}</CardSubtitle>
           <CardTitle>{title}</CardTitle>
           <Row className={'description'}>
-            <Col sm={12} md={4} className={'type'}>
+            <Col sm={12} md={3} className={'type'}>
               {type === 'Full Time' && <Badge color={'dark'}>Full Time</Badge>}
             </Col>
-            <Col sm={6} md={4}>
+            <Col sm={6} md={5}>
               <CardText>
                 <i className={'material-icons'}>public</i>
                 {location}
@@ -25,7 +25,7 @@ const JobCard = ({id, company_logo, company, title, location, created_at, type})
             <Col sm={6} md={4}>
               <CardText>
                 <i className={'material-icons'}>schedule</i>
-                {moment(created_at).fromNow()}
+                {moment(created_at, 'dddd MMMM DD HH:mm:ss [UTC] YYYY').fromNow()}
               </CardText>
             </Col>
           </Row>

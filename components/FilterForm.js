@@ -4,7 +4,7 @@ import {CustomInput, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputG
 const locations = ['London', 'Amsterdam', 'New York', 'Berlin'];
 
 const FilterForm = ({callback}) => {
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({isFullTime: false, location: ''});
 
   const onChange = (key, value) => {
     const newForm = {...form, [key]: value};
@@ -28,8 +28,8 @@ const FilterForm = ({callback}) => {
             </InputGroupText>
           </InputGroupAddon>
 
-          <Input placeholder={'City, state, zip code or country'}
-                 value={form.locationInput} onChange={e => onChange('locationInput', e.target.value)}/>
+          <Input id={'location-input'} placeholder={'City, state, zip code or country'}
+                 value={form.location} onChange={e => onChange('location', e.target.value)}/>
         </InputGroup>
       </FormGroup>
 
@@ -38,8 +38,8 @@ const FilterForm = ({callback}) => {
           const name = 'location-option';
           const key = `${name}-${index}`;
           return <CustomInput key={key} id={key} name={name} type={'radio'} label={location}
-                              value={form.locationOption === location}
-                              onChange={() => onChange('locationOption', location)}/>;
+                              value={form.location === location}
+                              onChange={() => onChange('location', location)}/>;
         })}
       </FormGroup>
     </Form>

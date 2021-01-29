@@ -27,6 +27,10 @@
     }
   }
 
+  .logo {
+    @extend .cell-center;
+  }
+
   .description {
     [class*='col'] {
       @extend .cell-sm, .mt-2;
