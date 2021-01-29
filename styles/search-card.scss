@@ -1,0 +1,27 @@
+.search-card {
+  background-color: transparent;
+  border-color: transparent;
+
+  .card-img {
+    min-height: 100px;
+
+    @media (min-width: 576px) {
+      min-height: 150px;
+    }
+
+    &-overlay {
+      display: flex;
+      align-items: center;
+
+      @media (min-width: 576px) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+      }
+
+      @media (min-width: 1200px) {
+        margin-left: 5rem;
+        margin-right: 5rem;
+      }
+    }
+  }
+}
