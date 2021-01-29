@@ -8,8 +8,8 @@ import {corsFetcher} from '../utilities/helper';
 
 const IndexPage = () => {
   const [query, setQuery] = useState({keyword: '', location: '', isFullTime: false});
-  const [pagination, setPagination] = useState(-1);
-  const [currentPage, setCurrentPage] = useState(-1);
+  const [pagination, setPagination] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const {data: jobList, error} = useSWR(['positions.json', query.keyword, query.location, query.isFullTime],
     async (url, description, location, full_time) => {
